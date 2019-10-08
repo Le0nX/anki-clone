@@ -31,11 +31,15 @@ class SelectQuestionGroupViewController: UIViewController {
 
 extension SelectQuestionGroupViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+       return questionGroups.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(
+        withIdentifier: "QuestionGroupCell") as! QuestionGroupCell
+        let questionGroup = questionGroups[indexPath.row]
+        cell.titleLabel.text = questionGroup.title
+        return cell
     }
     
     
