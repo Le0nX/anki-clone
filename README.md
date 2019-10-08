@@ -23,6 +23,21 @@
 * MVC является хорошей стартовой точкой, но имеет массу ограничений. Так зачастую контроллеры разрастаются в размерах и превращаются в Massive View Controllers.
 
 ### Delegation
+![](https://s3.amazonaws.com/oodles-technologies1/blog-images/9680efe1-b47a-49c0-a68c-e911906df8ff.png)
+
+The delegation pattern enables an object to use another “helper” object to provide data or perform a task rather than do the task itself. This pattern has three parts:
+* An object needing a delegate, also known as the delegating object. It’s the object that has a delegate. The delegate is usually held as a weak property to avoid a retain cycle where the delegating object retains the delegate, which retains the delegating object.
+* A delegate protocol, which defines the methods a delegate may or should implement.
+* A delegate, which is the helper object that implements the delegate protocol.
+
+Apple frameworks commonly use the term DataSource to group delegate methods that provide data. For example, UITableViewDataSource is expected to provide UITableViewCells to display.
+Apple frameworks typically use protocols named Delegate to group methods that receive data or events. For example, UITableViewDelegate is notified whenever a row is selected.
+
+Delegates are extremely useful, but they can be overused. Be careful about creating too many delegates for an object.
+If an object needs several delegates, this may be an indicator that it’s doing too much. Consider breaking up the object’s functionality for specific use cases, instead of one catch-all class.
+
+You should also be careful about creating retain cycles. Most often, delegate properties should be weak. If an object must absolutely have a delegate set, consider adding the delegate as an input to the object’s initializer and marking its type as forced unwrapped using ! instead of optional via ?. This will force consumers to set the delegate before using the object.
+If you find yourself tempted to create a strong delegate, another design pattern may be better suited for your use case. For example, you might consider using the strategy pattern instead. 
 
 ### Strategy 
 
