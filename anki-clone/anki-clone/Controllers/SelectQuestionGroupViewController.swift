@@ -42,5 +42,20 @@ extension SelectQuestionGroupViewController: UITableViewDelegate, UITableViewDat
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        selectedQuestionGroup = questionGroups[indexPath.row]
+        return indexPath
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // подготавливаемся к переходу
+        guard let vc = segue.destination as? QuestionViewController else {return}
+        vc.questionGroup = selectedQuestionGroup
+    }
+    
     
 }
