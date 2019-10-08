@@ -17,6 +17,7 @@
 		142D7CEE234A5A7400D07D51 /* QuestionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D7CED234A5A7400D07D51 /* QuestionGroup.swift */; };
 		142D7CF0234A5B1E00D07D51 /* QuestionGroupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D7CEF234A5B1E00D07D51 /* QuestionGroupData.swift */; };
 		142D7CF2234A5E1900D07D51 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D7CF1234A5E1900D07D51 /* QuestionView.swift */; };
+		142D7CF4234C476E00D07D51 /* SelectQuestionGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D7CF3234C476D00D07D51 /* SelectQuestionGroupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		142D7CED234A5A7400D07D51 /* QuestionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGroup.swift; sourceTree = "<group>"; };
 		142D7CEF234A5B1E00D07D51 /* QuestionGroupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionGroupData.swift; sourceTree = "<group>"; };
 		142D7CF1234A5E1900D07D51 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		142D7CF3234C476D00D07D51 /* SelectQuestionGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestionGroupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				142D7CD3234A565800D07D51 /* QuestionViewController.swift */,
+				142D7CF3234C476D00D07D51 /* SelectQuestionGroupViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				142D7CF2234A5E1900D07D51 /* QuestionView.swift in Sources */,
 				142D7CF0234A5B1E00D07D51 /* QuestionGroupData.swift in Sources */,
 				142D7CEE234A5A7400D07D51 /* QuestionGroup.swift in Sources */,
+				142D7CF4234C476E00D07D51 /* SelectQuestionGroupViewController.swift in Sources */,
 				142D7CD2234A565800D07D51 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,7 +6,7 @@
 ## Пройденные темы: 
 
 * [MVC](#mvc) - ака Model-View-Controller. Базовый паттерн разработки мобильных приложений.
-* [Delegation pattern](#delegation) - TODO
+* [Delegation pattern](#delegation) - The delegation pattern enables an object to use another “helper” object to provide data or perform a task rather than do the task itself
 * [Strategy pattern](#strategy) - TODO
 * [Singleton pattern](#singleton) - TODO
 * [Memento pattern](#memento) - TODO

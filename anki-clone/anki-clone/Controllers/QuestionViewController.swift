@@ -10,7 +10,7 @@ import UIKit
 
 class QuestionViewController: UIViewController {
 
-    //MARK: - Controller instances
+    //MARK: - Properties
     public var questionGroup = QuestionGroup.basicPhrases()
     public var questionIndex = 0
     
@@ -22,6 +22,7 @@ class QuestionViewController: UIViewController {
         return (view as! QuestionView)
     }
     
+    //MARK: - Controller logic
     override func viewDidLoad() {
         super.viewDidLoad()
         showQuestion()
@@ -38,6 +39,15 @@ class QuestionViewController: UIViewController {
         questionView?.hintLabel.isHidden = true
     }
 
+    private func showNextQuestion() {
+        questionIndex += 1
+        guard questionIndex < questionGroup.questions.count else {
+            // TODO: - Handle this...!
+            return
+        }
+        showQuestion()
+    }
+    
     // MARK: - IBActions
     @IBAction func toggleAnswerLabels(_ sender: Any) {
         questionView?.answerLabel.isHidden = !(questionView?.answerLabel.isHidden)!
@@ -48,19 +58,10 @@ class QuestionViewController: UIViewController {
         questionView!.correctCountLabel.text = "\(correctAnswers)"
         showNextQuestion()
     }
-    // 2
+
     @IBAction func handleIncorrect(_ sender: Any) { incorrectAnswers += 1
         questionView!.incorrectCountLabel.text = "\(incorrectAnswers)"
         showNextQuestion()
-    }
-    // 3
-    private func showNextQuestion() {
-        questionIndex += 1
-        guard questionIndex < questionGroup.questions.count else {
-            // TODO: - Handle this...!
-            return
-        }
-        showQuestion()
     }
 }
 
