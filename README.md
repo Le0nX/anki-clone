@@ -15,7 +15,7 @@
 
 
 ### MVC
-![](https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiVn5iS4YvlAhVVwsQBHQalDaUQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.pvsm.ru%2Fios%2F117313&psig=AOvVaw16HBFI8_sKZ-7HgCTyf29W&ust=1570592984981349)
+![](https://www.pvsm.ru/images/2016/04/07/arhitekturnye-patterny-v-iOS-3.png)
 Ключевые особенности: 
 * MVC разделяет объекты на три категории: models, views и controllers
 * MVC предполагает переиспользование моделей, view и контроллеров, однако последние в виду зачастую специфичной логики переиспользуютс не часто. 
