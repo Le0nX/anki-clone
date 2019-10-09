@@ -45,6 +45,8 @@ If you find yourself tempted to create a strong delegate, another design pattern
 
 ### Strategy 
 
+![](https://miro.medium.com/max/4000/1*F8nCO22vAG4mht6FyzOGbg.png)
+
 This pattern has three parts:
 * The object using a strategy. This is most often a view controller when the pattern is used in iOS app development, but it can technically be any kind of object that needs interchangeable behavior.
 * The strategy protocol defines methods that every strategy must implement.
