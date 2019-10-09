@@ -7,7 +7,7 @@
 
 * [MVC](#mvc) - ака Model-View-Controller. Базовый паттерн разработки мобильных приложений.
 * [Delegation pattern](#delegation) - The delegation pattern enables an object to use another “helper” object to provide data or perform a task rather than do the task itself
-* [Strategy pattern](#strategy) - TODO
+* [Strategy pattern](#strategy) - The strategy pattern defines a family of interchangeable objects that can be set or switched at runtime
 * [Singleton pattern](#singleton) - TODO
 * [Memento pattern](#memento) - TODO
 * [Observer pattern](#observer) - TODO
@@ -44,6 +44,19 @@ If you find yourself tempted to create a strong delegate, another design pattern
 * Delegates should be weak properties in the vast majority of use cases.
 
 ### Strategy 
+
+This pattern has three parts:
+* The object using a strategy. This is most often a view controller when the pattern is used in iOS app development, but it can technically be any kind of object that needs interchangeable behavior.
+* The strategy protocol defines methods that every strategy must implement.
+* The strategies are objects that conform to the strategy protocol.
+
+Be careful about overusing this pattern. In particular, if a behavior won’t ever change, it’s okay to put this directly within the consuming view controller or object context. The trick to this pattern is knowing when to pull out behaviors, and it’s okay to do this lazily as you determine where it’s needed.
+
+Use the strategy pattern when you have two or more different behaviors that are interchangeable.
+This pattern is similar to the delegation pattern: both patterns rely on a protocol instead of concrete objects for increased flexibility. Consequently, any object that implements the strategy protocol can be used as a strategy at runtime.
+Unlike delegation, the strategy pattern uses a family of objects.
+Delegates are often fixed at runtime. For example, the dataSource and delegate for a UITableView can be set from Interface Builder, and it’s rare for these to change during runtime.
+Strategies, however, are intended to be easily interchangeable at runtime.
 
 ### Singleton
 
