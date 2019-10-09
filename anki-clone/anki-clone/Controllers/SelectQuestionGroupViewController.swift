@@ -55,6 +55,22 @@ extension SelectQuestionGroupViewController: UITableViewDelegate, UITableViewDat
         // подготавливаемся к переходу
         guard let vc = segue.destination as? QuestionViewController else {return}
         vc.questionGroup = selectedQuestionGroup
+        vc.delegate = self // передаем себя в качестве делегата questionVC'ру
+    }
+    
+    
+}
+
+
+extension SelectQuestionGroupViewController: QuestionViewControllerDelegate {
+    func questionViewController(_ viewController: QuestionViewController, didCancel questionGroup: QuestionGroup, at questionIndex: Int) {
+        
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func questionViewController(_ viewController: QuestionViewController, didComplete questionGroup: QuestionGroup, at questionIndex: Int) {
+        
+        navigationController?.popViewController(animated: true)
     }
     
     

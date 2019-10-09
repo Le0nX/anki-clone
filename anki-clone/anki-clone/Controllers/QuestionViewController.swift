@@ -8,10 +8,32 @@
 
 import UIKit
 
-class QuestionViewController: UIViewController {
+public protocol QuestionViewControllerDelegate: class {
+    func questionViewController(_ viewController: QuestionViewController,
+                                  didCancel questionGroup: QuestionGroup,
+                                  at questionIndex: Int)
+    
+    func questionViewController(_ viewController: QuestionViewController,
+                                  didComplete questionGroup: QuestionGroup,
+                                  at questionIndex: Int)
+}
+
+public class QuestionViewController: UIViewController {
 
     //MARK: - Properties
-    public var questionGroup = QuestionGroup.basicPhrases()
+    public var questionGroup: QuestionGroup! {
+        didSet {
+            navigationItem.title = questionGroup.title
+        }
+    }
+    
+    private lazy var questionIndexItem: UIBarButtonItem = {
+        let item = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        item.tintColor = .black
+        navigationItem.rightBarButtonItem = item
+        return item
+    }()
+    
     public var questionIndex = 0
     
     public var correctAnswers = 0
@@ -22,9 +44,14 @@ class QuestionViewController: UIViewController {
         return (view as! QuestionView)
     }
     
+    //MARK: - Delegate
+    // слабая ссылка для избежания retain cicle
+    public weak var delegate: QuestionViewControllerDelegate?
+    
     //MARK: - Controller logic
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
+        setupCancelButton()
         showQuestion()
     }
     
@@ -37,6 +64,8 @@ class QuestionViewController: UIViewController {
         
         questionView?.answerLabel.isHidden = true
         questionView?.hintLabel.isHidden = true
+        
+        questionIndexItem.title = "\(questionIndex + 1)/" + "\(questionGroup.questions.count)"
     }
 
     private func showNextQuestion() {
@@ -47,6 +76,18 @@ class QuestionViewController: UIViewController {
         }
         showQuestion()
     }
+    
+    //MARK: - Cancel Button Routines
+    private func setupCancelButton() {
+        let action = #selector(handleCancelPressed(sender:))
+        let image = UIImage(named: "ic_menu")
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: action)
+    }
+    
+    @objc private func handleCancelPressed(sender: UIBarButtonItem) {
+        delegate?.questionViewController(self, didCancel: questionGroup, at: questionIndex)
+    }
+    
     
     // MARK: - IBActions
     @IBAction func toggleAnswerLabels(_ sender: Any) {
