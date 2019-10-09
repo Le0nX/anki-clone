@@ -39,6 +39,10 @@ If an object needs several delegates, this may be an indicator that it’s doing
 You should also be careful about creating retain cycles. Most often, delegate properties should be weak. If an object must absolutely have a delegate set, consider adding the delegate as an input to the object’s initializer and marking its type as forced unwrapped using ! instead of optional via ?. This will force consumers to set the delegate before using the object.
 If you find yourself tempted to create a strong delegate, another design pattern may be better suited for your use case. For example, you might consider using the strategy pattern instead. 
 
+* The delegation pattern has three parts: an object needing a delegate, a delegate protocol and a delegate.
+* This pattern allows you to break up large classes and create generic, reusable components.
+* Delegates should be weak properties in the vast majority of use cases.
+
 ### Strategy 
 
 ### Singleton
