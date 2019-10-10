@@ -19,6 +19,9 @@
 		142D7CF2234A5E1900D07D51 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D7CF1234A5E1900D07D51 /* QuestionView.swift */; };
 		142D7CF4234C476E00D07D51 /* SelectQuestionGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D7CF3234C476D00D07D51 /* SelectQuestionGroupViewController.swift */; };
 		142D7CF6234C4CB300D07D51 /* QuestionGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D7CF5234C4CB300D07D51 /* QuestionGroupCell.swift */; };
+		142D7CF9234DAA1C00D07D51 /* QuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D7CF8234DAA1C00D07D51 /* QuestionStrategy.swift */; };
+		142D7CFB234EE34600D07D51 /* SequentialQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D7CFA234EE34600D07D51 /* SequentialQuestionStrategy.swift */; };
+		142D7CFD234EE6AC00D07D51 /* RandomQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D7CFC234EE6AC00D07D51 /* RandomQuestionStrategy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		142D7CF1234A5E1900D07D51 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		142D7CF3234C476D00D07D51 /* SelectQuestionGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestionGroupViewController.swift; sourceTree = "<group>"; };
 		142D7CF5234C4CB300D07D51 /* QuestionGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGroupCell.swift; sourceTree = "<group>"; };
+		142D7CF8234DAA1C00D07D51 /* QuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStrategy.swift; sourceTree = "<group>"; };
+		142D7CFA234EE34600D07D51 /* SequentialQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialQuestionStrategy.swift; sourceTree = "<group>"; };
+		142D7CFC234EE6AC00D07D51 /* RandomQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuestionStrategy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,11 +74,12 @@
 		142D7CCE234A565800D07D51 /* anki-clone */ = {
 			isa = PBXGroup;
 			children = (
+				142D7CF7234DA9F800D07D51 /* Strategies */,
+				142D7CE3234A569400D07D51 /* AppDelegate */,
+				142D7CE5234A56F700D07D51 /* Controllers */,
+				142D7CE6234A56FD00D07D51 /* Models */,
 				142D7CE8234A571E00D07D51 /* Resources */,
 				142D7CE7234A571000D07D51 /* Views */,
-				142D7CE6234A56FD00D07D51 /* Models */,
-				142D7CE5234A56F700D07D51 /* Controllers */,
-				142D7CE3234A569400D07D51 /* AppDelegate */,
 			);
 			path = "anki-clone";
 			sourceTree = "<group>";
@@ -123,6 +130,16 @@
 				142D7CDD234A565D00D07D51 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		142D7CF7234DA9F800D07D51 /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				142D7CF8234DAA1C00D07D51 /* QuestionStrategy.swift */,
+				142D7CFA234EE34600D07D51 /* SequentialQuestionStrategy.swift */,
+				142D7CFC234EE6AC00D07D51 /* RandomQuestionStrategy.swift */,
+			);
+			path = Strategies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +219,9 @@
 				142D7CF2234A5E1900D07D51 /* QuestionView.swift in Sources */,
 				142D7CF0234A5B1E00D07D51 /* QuestionGroupData.swift in Sources */,
 				142D7CF6234C4CB300D07D51 /* QuestionGroupCell.swift in Sources */,
+				142D7CFB234EE34600D07D51 /* SequentialQuestionStrategy.swift in Sources */,
+				142D7CFD234EE6AC00D07D51 /* RandomQuestionStrategy.swift in Sources */,
+				142D7CF9234DAA1C00D07D51 /* QuestionStrategy.swift in Sources */,
 				142D7CEE234A5A7400D07D51 /* QuestionGroup.swift in Sources */,
 				142D7CF4234C476E00D07D51 /* SelectQuestionGroupViewController.swift in Sources */,
 				142D7CD2234A565800D07D51 /* SceneDelegate.swift in Sources */,
