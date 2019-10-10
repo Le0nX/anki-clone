@@ -67,6 +67,8 @@ Strategies, however, are intended to be easily interchangeable at runtime.
 The singleton pattern restricts a class to only one instance. Every reference to the class refers to the same underlying instance. This pattern is extremely common in iOS app development, as Apple makes extensive use of it.
 The “singleton plus” pattern is also common, which provides a shared singleton instance that allows other instances to be created, too.
 
+A very most common reason why singletons are problematic is testing. If you have state being stored in a global object like a singleton then order of tests can matter, and it can be painful to mock them. Both of these reasons make testing a pain.
+
 ### Memento
 
 ### Observer
