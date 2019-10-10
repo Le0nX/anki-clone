@@ -8,7 +8,7 @@
 * [MVC](#mvc) - ака Model-View-Controller. Базовый паттерн разработки мобильных приложений.
 * [Delegation pattern](#delegation) - The delegation pattern enables an object to use another “helper” object to provide data or perform a task rather than do the task itself
 * [Strategy pattern](#strategy) - The strategy pattern defines a family of interchangeable objects that can be set or switched at runtime
-* [Singleton pattern](#singleton) - TODO
+* [Singleton pattern](#singleton) - Use the singleton pattern when having more than one instance of a class would cause problems, or when it just wouldn’t be logical.
 * [Memento pattern](#memento) - TODO
 * [Observer pattern](#observer) - TODO
 * [Builder pattern](#builder) - TODO
@@ -61,6 +61,11 @@ Delegates are often fixed at runtime. For example, the dataSource and delegate f
 Strategies, however, are intended to be easily interchangeable at runtime.
 
 ### Singleton
+
+![](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/Art/singleton_2x.png)
+
+The singleton pattern restricts a class to only one instance. Every reference to the class refers to the same underlying instance. This pattern is extremely common in iOS app development, as Apple makes extensive use of it.
+The “singleton plus” pattern is also common, which provides a shared singleton instance that allows other instances to be created, too.
 
 ### Memento
 
