@@ -31,7 +31,7 @@ public class RandomQuestionStrategy: QuestionStrategy {
     }
     
     public func advanceToNextQuestion() -> Bool {
-        guard questionIndex < questions.count else {
+        guard questionIndex < (questions.count-1) else {
             return false
         }
         
