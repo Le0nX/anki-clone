@@ -22,6 +22,7 @@
 		142D7CF9234DAA1C00D07D51 /* QuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D7CF8234DAA1C00D07D51 /* QuestionStrategy.swift */; };
 		142D7CFB234EE34600D07D51 /* SequentialQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D7CFA234EE34600D07D51 /* SequentialQuestionStrategy.swift */; };
 		142D7CFD234EE6AC00D07D51 /* RandomQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D7CFC234EE6AC00D07D51 /* RandomQuestionStrategy.swift */; };
+		142D7CFF234EFC1500D07D51 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D7CFE234EFC1400D07D51 /* AppSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		142D7CF8234DAA1C00D07D51 /* QuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStrategy.swift; sourceTree = "<group>"; };
 		142D7CFA234EE34600D07D51 /* SequentialQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialQuestionStrategy.swift; sourceTree = "<group>"; };
 		142D7CFC234EE6AC00D07D51 /* RandomQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuestionStrategy.swift; sourceTree = "<group>"; };
+		142D7CFE234EFC1400D07D51 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				142D7CEB234A590000D07D51 /* Question.swift */,
 				142D7CED234A5A7400D07D51 /* QuestionGroup.swift */,
 				142D7CEF234A5B1E00D07D51 /* QuestionGroupData.swift */,
+				142D7CFE234EFC1400D07D51 /* AppSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				142D7CFF234EFC1500D07D51 /* AppSettings.swift in Sources */,
 				142D7CD4234A565800D07D51 /* QuestionViewController.swift in Sources */,
 				142D7CEC234A590000D07D51 /* Question.swift in Sources */,
 				142D7CD0234A565800D07D51 /* AppDelegate.swift in Sources */,
