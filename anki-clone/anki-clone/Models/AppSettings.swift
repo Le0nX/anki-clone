@@ -13,6 +13,24 @@ import Foundation
 public class AppSettings {
     public static let shared = AppSettings()
     
+    // MARK: - UserDefaults Keys
+    private struct Keys {
+      static let questionStrategy = "questionStrategy"
+    }
+    
+    //MARK: - UserDefaults save/load
+    private let userDefaults = UserDefaults.standard
+    public var questionStrategyType: QuestionStrategyType {
+        get {
+            let rawValue =  userDefaults.integer(forKey: Keys.questionStrategy)
+            return QuestionStrategyType(rawValue: rawValue)!
+        }
+        set {
+            userDefaults.set(newValue.rawValue, forKey: Keys.questionStrategy)
+        }
+    }
+    
+    
     private init(){}
 }
 
