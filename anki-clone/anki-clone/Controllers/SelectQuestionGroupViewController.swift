@@ -30,6 +30,7 @@ class SelectQuestionGroupViewController: UIViewController {
 }
 
 extension SelectQuestionGroupViewController: UITableViewDelegate, UITableViewDataSource {
+    //MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return questionGroups.count
     }
@@ -42,7 +43,12 @@ extension SelectQuestionGroupViewController: UITableViewDelegate, UITableViewDat
         return cell
     }
     
+    //MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        // выбираем группу в willSelectRowAt
+        // потому что переход осуществляется полсе этого вызова и до
+        // didSelectRowAt. Если мы попытаемся назначить группу в didSelectRowAt, то
+        // на момент prepare мы получим ошибку из-за nil в selectedQuestionGroup
         selectedQuestionGroup = questionGroups[indexPath.row]
         return indexPath
     }
@@ -51,6 +57,7 @@ extension SelectQuestionGroupViewController: UITableViewDelegate, UITableViewDat
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    //MARK: - Segue prepare
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // подготавливаемся к переходу
         guard let vc = segue.destination as? QuestionViewController else {return}

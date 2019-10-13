@@ -30,6 +30,10 @@ public class AppSettings {
         }
     }
     
+    //MARK: - Instance methods
+    public func questionStrategy(for group: QuestionGroup) -> QuestionStrategy {
+        return questionStrategyType.questionStrategy(for: group)
+    }
     
     private init(){}
 }
