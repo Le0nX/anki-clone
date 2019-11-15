@@ -1,0 +1,20 @@
+//
+//  ViewController.swift
+//  anki-clone
+//
+//  Created by Denis Nefedov on 15.11.2019.
+//  Copyright © 2019 X. All rights reserved.
+//
+import UIKit
+
+public class AppSettingsViewController: UITableViewController {
+  
+  public  let appSettings = AppSettings.shared
+  private let basicCellId = "SettingsCell"
+
+  public override func viewDidLoad() {
+    super.viewDidLoad()
+    tableView.tableFooterView = UIView()
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+  }
+}
