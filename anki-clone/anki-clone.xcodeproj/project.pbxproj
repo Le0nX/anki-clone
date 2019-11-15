@@ -23,6 +23,7 @@
 		142D7CFB234EE34600D07D51 /* SequentialQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D7CFA234EE34600D07D51 /* SequentialQuestionStrategy.swift */; };
 		142D7CFD234EE6AC00D07D51 /* RandomQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D7CFC234EE6AC00D07D51 /* RandomQuestionStrategy.swift */; };
 		142D7CFF234EFC1500D07D51 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D7CFE234EFC1400D07D51 /* AppSettings.swift */; };
+		7F3CB624237EA0AC001642F1 /* AppSettingsViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3CB623237EA0AC001642F1 /* AppSettingsViewControllerTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		142D7CFA234EE34600D07D51 /* SequentialQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialQuestionStrategy.swift; sourceTree = "<group>"; };
 		142D7CFC234EE6AC00D07D51 /* RandomQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuestionStrategy.swift; sourceTree = "<group>"; };
 		142D7CFE234EFC1400D07D51 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		7F3CB623237EA0AC001642F1 /* AppSettingsViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewControllerTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				142D7CD3234A565800D07D51 /* QuestionViewController.swift */,
 				142D7CF3234C476D00D07D51 /* SelectQuestionGroupViewController.swift */,
+				7F3CB623237EA0AC001642F1 /* AppSettingsViewControllerTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				142D7CFF234EFC1500D07D51 /* AppSettings.swift in Sources */,
+				7F3CB624237EA0AC001642F1 /* AppSettingsViewControllerTableViewController.swift in Sources */,
 				142D7CD4234A565800D07D51 /* QuestionViewController.swift in Sources */,
 				142D7CEC234A590000D07D51 /* Question.swift in Sources */,
 				142D7CD0234A565800D07D51 /* AppDelegate.swift in Sources */,

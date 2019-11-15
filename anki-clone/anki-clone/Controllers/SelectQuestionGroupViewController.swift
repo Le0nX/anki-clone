@@ -10,7 +10,6 @@ import UIKit
 
 class SelectQuestionGroupViewController: UIViewController {
     //MARK: - IBOutlets
-    
     @IBOutlet internal var tableView: UITableView! {
         didSet {
             tableView.tableFooterView = UIView() // убираем неиспользуемые cells.
@@ -18,6 +17,7 @@ class SelectQuestionGroupViewController: UIViewController {
     }
     
     //MARK: - Properties
+    private let appSettins = AppSettings.shared
     public let questionGroups = QuestionGroup.allGroups()
     private var selectedQuestionGroup: QuestionGroup!
     
@@ -61,7 +61,7 @@ extension SelectQuestionGroupViewController: UITableViewDelegate, UITableViewDat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // подготавливаемся к переходу
         guard let vc = segue.destination as? QuestionViewController else {return}
-        vc.questionStrategy = RandomQuestionStrategy(questionGroup: selectedQuestionGroup)
+        vc.questionStrategy = appSettins.questionStrategy(for: selectedQuestionGroup)
         vc.delegate = self // передаем себя в качестве делегата questionVC'ру
     }
     

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fDy-8l-3tQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fDy-8l-3tQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -71,7 +71,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jkf-ZL-T7N"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Select Question Group" id="NjV-ci-BNp"/>
+                    <navigationItem key="navigationItem" title="Select Question Group" id="NjV-ci-BNp">
+                        <barButtonItem key="leftBarButtonItem" image="ic_settings" id="3x0-nb-rx6">
+                            <connections>
+                                <segue destination="2t1-hO-oPF" kind="show" id="eWr-w0-hkP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="x04-5n-ZgF" id="Fi7-nc-xuY"/>
                     </connections>
@@ -193,9 +199,39 @@
             </objects>
             <point key="canvasLocation" x="-423.1884057971015" y="97.767857142857139"/>
         </scene>
+        <!--App Settings View Controller Table View Controller-->
+        <scene sceneID="Ob4-wx-fGY">
+            <objects>
+                <tableViewController id="2t1-hO-oPF" customClass="AppSettingsViewControllerTableViewController" customModule="anki_clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XSb-12-cGc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="W2F-DQ-xVx">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W2F-DQ-xVx" id="7Hy-hm-mc2">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2t1-hO-oPF" id="6Eu-WX-BSq"/>
+                            <outlet property="delegate" destination="2t1-hO-oPF" id="b0x-Ha-XKA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="fwn-oX-dhx"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K9K-nb-XfW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="487" y="824"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ic_circle_check" width="80" height="80"/>
         <image name="ic_circle_x" width="80" height="80"/>
+        <image name="ic_settings" width="26" height="26"/>
     </resources>
 </document>
